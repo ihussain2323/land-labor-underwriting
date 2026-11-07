@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "property": "",
+  "as_of": "",
+  "sources": {},
+  "decisions": {
+    "purchase_price": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "buyer_cost_rate": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "close_date": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "hold_months": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "exit_cap": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "sale_cost_rate": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "gp_share": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "acquired_units": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "acquired_rsf": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "current_leasing": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "forecast_leasing": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "renewal_rate": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "market_rent_growth": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "opex_growth": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "property_management": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "asset_management": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "annual_reserve_per_unit": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "other_income": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "renovation": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "tax_schedule": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "surcharge": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "loan_structure": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "promote": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    }
+  },
+  "roll": null,
+  "t12": null,
+  "issues": []
+}

@@ -1,0 +1,21 @@
+# How to choose an input
+
+For each material field determine what the number represents first. A seller’s asking price can coexist with a different bid. Current occupancy, assumed stabilized occupancy and renewal probability measure different things. A lender indication and a signed loan agreement carry different weight. Preserve these meanings in the evidence record and the model.
+
+| Status in deal.json | Evidence and treatment |
+|---|---|
+| given | The subject source provides the number. Record the document, page, unit or worksheet, as-of date, ownership scope and whether the number is historical, quoted or proposed. A broker pro forma is evidence of the broker’s forecast. |
+| derived | Show the operands, their sources, period and arithmetic. Examples include weighted tax, a monthly rent per SF, or the net benchmark allowance after overlap. |
+| instruction | Cite the deal team’s instruction for this screen. Preserve an actual from the seller separately when the instruction selects a different assumption. |
+| precedent | Identify the completed deal, version, cell or timestamp, reason it fits, and the subject evidence that would replace it. Count a deal once across workbook versions. Review contrary precedents. |
+| scenario | Identify the base, alternative, eligibility, timing, and changed outputs. Use separate scenario keys or records so base assumptions stay unambiguous. |
+| unknown | Use a null value and an actionable issue. Record the room inventory or search used to establish the gap. Establish a separate explicit screening assumption when a running model needs a value. |
+| not_applicable | Use null and identify why the acquired interest or selected structure excludes the item. Distinguish cash acquisition, excluded retail and unused promote from a missing term. |
+
+Use the applicable executed agreement, bill or ledger for its fact and period. Use leasing, OM and broker materials to corroborate or explain differences. Where sources conflict, check date, ownership, units, annual versus monthly, cash versus accrued, regulated versus market, and net versus gross. Retain both observations and show how the chosen base treats them. A quoted rent on a vacant unit can be part of scheduled rent while collections remain zero or unknown.
+
+**What travels to a new deal.** Always copy or resume the verified deal workbook, reconcile source totals, distinguish evidence from assumptions, preserve formulas and verify cash flows. The prior reviews support a 70% renewal screen, 3% market rent growth, 3% growth on included dollar operating lines, $250 per unit of replacement reserves with 3% growth, and a 4% cost of sale when applicable. For NYC screens a 3% buyer cost allowance and 5% GP share have multiple precedents. Use the more specific deal instruction or documentation when it differs. See [the evidence and exceptions](underwriting-conventions.md).
+
+**What depends on the building.** Select price, timing, purchase lead time, actual and projected occupancy, allowable and collectible rents, tax treatment, retail rights, renovation program, capital stack, loan coupon, fees, sponsor terms and exit cap for the deal. In one reviewed deal the planning close was about five months out, forecast leasing was 98%, reserve was below NOI, and other receipts and renovation premiums were unsupported. These choices need fresh evidence on the next building. Four years is a screening hold precedent; loan maturity is a separate input even when both are 48 months. There is no verified firmwide four-, five- or six-month acquisition lead.
+
+**Record details.** Each decision carries value, unit, status, source ID, basis and destination. Source entries point to a file plus page, range, date or recording timestamp; use additional source IDs in the basis when combining sources. Keep percentages as decimals, dates as ISO dates and amounts in the stated currency. Source ID references may also identify a dated instruction or inventory of missing documents. Append fields for each distinct loan, fee, growth series, research observation, buyer cost component, unit-type method, OpEx adjustment and active scenario as needed. The starter lists the minimum recurring decisions. Give excluded items an explicit disposition. Retain source version, retrieval date and the exact model or worksheet version in the deal working folder.

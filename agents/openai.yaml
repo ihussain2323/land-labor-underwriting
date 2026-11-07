@@ -1,0 +1,4 @@
+interface:
+  display_name: "Land Labor Underwriting"
+  short_description: "Model and review Land Labor multifamily acquisitions"
+  default_prompt: "Use $land-labor-underwriting to underwrite this deal in a copy of our multifamily template."

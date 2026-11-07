@@ -1,0 +1,277 @@
+{
+  "Transaction Inputs": {
+    "anchors": {
+      "B6": "Entry Yield | Asset Purchase Price",
+      "I6": "Acquisition Date",
+      "G17": "Loan 1",
+      "I25": "GP Partner Peak Equity",
+      "B41": "Loan Costs - % of Total Facility Proceeds at Funding",
+      "B67": "Total Sources",
+      "E67": "Total Uses"
+    },
+    "inputs": {
+      "purchase_price": "G6",
+      "pricing_label": "G3",
+      "trailing_basis": "E6",
+      "seller_credits": "G9",
+      "buyer_cost_rate": "F12",
+      "close_date": "Q6",
+      "hold_months": "Q7",
+      "exit_cap": "N12",
+      "retail_exit_cap": "N13",
+      "sale_cost_rate": "P17",
+      "loan_active": "E18:G18",
+      "loan_repayment_source": "E19:G19",
+      "loan_funding_month": "E21:G21",
+      "loan_term": "E24:G24",
+      "loan_io": "E27:G27",
+      "loan_amortization": "E28:G28",
+      "loan_rate_type": "E30:G30",
+      "loan_rate": "E31:G31",
+      "loan_day_count": "E33:G33",
+      "loan_method": "E36:G36",
+      "loan_size_or_percent": "E37:G37",
+      "loan_holdback_window": "G38",
+      "loan_holdback_share": "G39",
+      "loan_fee": "E41:G41",
+      "repayment_fee": "E42:G42",
+      "gp_share": "P25",
+      "promote": "Q29"
+    },
+    "outputs": {
+      "price": "G6",
+      "buyer_costs": "G12",
+      "hold": "Q7",
+      "close": "Q6",
+      "sale": "Q8",
+      "gp_share": "P25",
+      "gp": "Q25",
+      "lp": "Q26",
+      "equity": "Q27",
+      "opening_debt": "D62",
+      "debt": "D64",
+      "sources": "D67",
+      "uses": "G67",
+      "loan_costs": "G60",
+      "loan1_enabled": "G18",
+      "loan1_dscr": "G53",
+      "loan1_yield": "G52",
+      "exit_cap": "N12",
+      "sale_cost_rate": "P17"
+    }
+  },
+  "Asset Inputs": {
+    "anchors": {
+      "B6": "Property Name",
+      "B16": "Year",
+      "B24": "Percent Leased",
+      "B26": "Renewal %",
+      "B34": "Unrenovated Rent, Growth, Concessions",
+      "B76": "Capital Expenditures, Unit Renovations & Conversions",
+      "B120": "Other Income & Growth",
+      "B141": "Operating Expenses",
+      "B194": "Real Estate Tax Analysis"
+    },
+    "inputs": {
+      "identity": "E6:E13",
+      "retail_area": "J7",
+      "land_sf": "J10",
+      "current_leasing": "J12",
+      "retail_leasing": "J13",
+      "unit_types": "L7:L10",
+      "unit_counts": "N7:N10",
+      "unit_sizes": "O7:O10",
+      "nonrevenue_units": "O13",
+      "research_rent": "D19:O19",
+      "research_value": "D20:O20",
+      "leasing": "D24:O24",
+      "loss_to_lease": "E25:O25",
+      "renewal_rate": "E26:O26",
+      "bad_debt": "E27:O27",
+      "rent_growth_type1": "E37:O37",
+      "rent_growth_type2": "E47:O47",
+      "rent_growth_type3": "E57:O57",
+      "rent_growth_type4": "E67:O67",
+      "starting_rent1": "D40",
+      "starting_rent2": "D50",
+      "starting_rent3": "D60",
+      "starting_rent4": "D70",
+      "capital_ex_reserve": "E116:O116",
+      "reserve_growth": "F117:O117",
+      "annual_reserve_per_unit": "E118",
+      "other_income_selectors": "D124:D130",
+      "other_income_rate": "F124:F130",
+      "other_income_per_unit": "G124:G130",
+      "other_income_growth": "E133:O139",
+      "opex_selectors": "D146:D159",
+      "opex_pct": "F146:F159",
+      "opex_per_unit": "G146:G159",
+      "additional_fees": "B167:G170",
+      "operating_growth": "E173:O191",
+      "assessed_land_improvements": "D198",
+      "assessment_ratio": "D199",
+      "effective_tax_rate": "D204",
+      "operating.Repairs & Maintenance.selector": "D146",
+      "operating.Repairs & Maintenance.rate": "F146",
+      "operating.Repairs & Maintenance.per_unit": "G146",
+      "operating.Repairs & Maintenance.growth": "E173:O173",
+      "operating.Contract Services.selector": "D147",
+      "operating.Contract Services.rate": "F147",
+      "operating.Contract Services.per_unit": "G147",
+      "operating.Contract Services.growth": "E174:O174",
+      "operating.Personnel.selector": "D148",
+      "operating.Personnel.rate": "F148",
+      "operating.Personnel.per_unit": "G148",
+      "operating.Personnel.growth": "E175:O175",
+      "operating.Marketing/Advertising.selector": "D149",
+      "operating.Marketing/Advertising.rate": "F149",
+      "operating.Marketing/Advertising.per_unit": "G149",
+      "operating.Marketing/Advertising.growth": "E176:O176",
+      "operating.G&A.selector": "D150",
+      "operating.G&A.rate": "F150",
+      "operating.G&A.per_unit": "G150",
+      "operating.G&A.growth": "E177:O177",
+      "operating.Turnover/Make-Ready.selector": "D151",
+      "operating.Turnover/Make-Ready.rate": "F151",
+      "operating.Turnover/Make-Ready.per_unit": "G151",
+      "operating.Turnover/Make-Ready.growth": "E178:O178",
+      "operating.Utilities.selector": "D152",
+      "operating.Utilities.rate": "F152",
+      "operating.Utilities.per_unit": "G152",
+      "operating.Utilities.growth": "E179:O179",
+      "operating.Insurance.selector": "D153",
+      "operating.Insurance.rate": "F153",
+      "operating.Insurance.per_unit": "G153",
+      "operating.Insurance.growth": "E180:O180",
+      "operating.Mgmt. Fee.selector": "D154",
+      "operating.Mgmt. Fee.rate": "F154",
+      "operating.Mgmt. Fee.per_unit": "G154",
+      "operating.Mgmt. Fee.growth": "E181:O181",
+      "operating.Other Exp. 1.selector": "D155",
+      "operating.Other Exp. 1.rate": "F155",
+      "operating.Other Exp. 1.per_unit": "G155",
+      "operating.Other Exp. 1.growth": "E182:O182",
+      "operating.Other Exp. 2.selector": "D156",
+      "operating.Other Exp. 2.rate": "F156",
+      "operating.Other Exp. 2.per_unit": "G156",
+      "operating.Other Exp. 2.growth": "E183:O183",
+      "operating.Other Exp. 3.selector": "D157",
+      "operating.Other Exp. 3.rate": "F157",
+      "operating.Other Exp. 3.per_unit": "G157",
+      "operating.Other Exp. 3.growth": "E184:O184",
+      "operating.Other Exp. 4.selector": "D158",
+      "operating.Other Exp. 4.rate": "F158",
+      "operating.Other Exp. 4.per_unit": "G158",
+      "operating.Other Exp. 4.growth": "E185:O185",
+      "operating.Other Exp. 5.selector": "D159",
+      "operating.Other Exp. 5.rate": "F159",
+      "operating.Other Exp. 5.per_unit": "G159",
+      "operating.Other Exp. 5.growth": "E186:O186"
+    },
+    "outputs": {
+      "name": "E6",
+      "rsf": "J6",
+      "units": "N11",
+      "current_leasing": "J12",
+      "forecast_leasing": "E24",
+      "renewal_rate": "E26",
+      "reserve_per_unit": "E118"
+    }
+  },
+  "T-12": {
+    "anchors": {
+      "B3": "T-12 Data Import"
+    },
+    "inputs": {
+      "first_month": "C7",
+      "monthly_history": "B9:N300",
+      "account_mapping": "R9:R300",
+      "history.Personnel.label": "B69",
+      "history.Personnel.monthly": "C69:N69",
+      "history.Personnel.account": "R69",
+      "history.Repairs & Maintenance.label": "B90",
+      "history.Repairs & Maintenance.monthly": "C90:N90",
+      "history.Repairs & Maintenance.account": "R90",
+      "history.Marketing/Advertising.label": "B140",
+      "history.Marketing/Advertising.monthly": "C140:N140",
+      "history.Marketing/Advertising.account": "R140",
+      "history.Utilities.label": "B179",
+      "history.Utilities.monthly": "C179:N179",
+      "history.Utilities.account": "R179",
+      "history.Insurance.label": "B192",
+      "history.Insurance.monthly": "C192:N192",
+      "history.Insurance.account": "R192",
+      "history.Other Exp. 1.label": "B193",
+      "history.Other Exp. 1.monthly": "C193:N193",
+      "history.Other Exp. 1.account": "R193"
+    },
+    "outputs": {
+      "history_end": "N7"
+    }
+  },
+  "Historicals": {
+    "anchors": {
+      "B47": "Net Operating Income before CapEx"
+    },
+    "inputs": {},
+    "outputs": {
+      "history_expenses": "D45",
+      "history_noi": "D47"
+    }
+  },
+  "CF Summary": {
+    "anchors": {
+      "B52": "Net Operating Income",
+      "B69": "Net Cash Flow Before Debt",
+      "B73": "Less: Closing Costs",
+      "B130": "BOP: MFFO Equity",
+      "B93": "Cash Flow After Debt"
+    },
+    "inputs": {},
+    "outputs": {
+      "egi": "G28",
+      "opex": "G49",
+      "noi": "G52",
+      "cash_before_debt": "G69",
+      "initial_principal": "F79",
+      "opening_fee_cf": "F81",
+      "year1_debt_service": "G82",
+      "year1_equity_cf": "G93",
+      "mffo_open": "G130",
+      "mffo_close_at_purchase": "F132"
+    }
+  },
+  "Asset Mo. CF": {
+    "anchors": {
+      "B2": "Asset Monthly Cash Flows",
+      "B131": "Cash Flow After Debt"
+    },
+    "inputs": {},
+    "outputs": {
+      "dates": "D10:LD10",
+      "levered_cash": "D131:LD131",
+      "loan1_payoff": "D108:LD108"
+    }
+  },
+  "Executive Summary": {
+    "anchors": {
+      "B42": [
+        "IRR Over Hold Period",
+        "IRR Over Hold Period (annualized return incl. sale proceeds)"
+      ],
+      "B43": [
+        "Equity Multiple",
+        "Equity Multiple (total distributions \u00f7 total equity invested)"
+      ]
+    },
+    "inputs": {},
+    "outputs": {
+      "irr": "E42",
+      "multiple": "E43",
+      "cash_on_cash": "E34",
+      "cap_rate": "D25",
+      "exit_noi": "J52",
+      "gross_sale": "J55"
+    }
+  }
+}
