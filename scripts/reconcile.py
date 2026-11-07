@@ -97,7 +97,8 @@ def reconcile(deal):
         t = deal["t12"]
         cats = {name: round(sum(vals), 2) for name, vals in t["expenses"].items()}
         amounts = [round(sum(vals), 2) for vals in zip(*t["expenses"].values())]
-        total_expenses = round(sum(amounts), 2)
+        # Source ledgers can allocate costs to fractions of a cent each month.
+        total_expenses = round(math.fsum(v for row in t["expenses"].values() for v in row), 2)
         result["history"] = {"categories": cats, "monthly_expenses": amounts, "total_expenses": total_expenses}
         if abs(total_expenses - t["reported_expenses"]) > 0.011:
             errors.append(f"Expense detail {total_expenses} vs statement {t['reported_expenses']}")
