@@ -100,7 +100,23 @@
       "basis": "",
       "destination": ""
     },
+    "bad_debt": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
     "market_rent_growth": {
+      "value": null,
+      "status": "unknown",
+      "unit": "",
+      "source": "",
+      "basis": "",
+      "destination": ""
+    },
+    "stabilized_rent_growth": {
       "value": null,
       "status": "unknown",
       "unit": "",

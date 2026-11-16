@@ -11,7 +11,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 ROOT = Path(__file__).resolve().parents[1]
 RATES = {"gp_share", "current_leasing", "forecast_leasing", "renewal_rate",
-         "buyer_cost_rate", "exit_cap", "sale_cost_rate"}
+         "buyer_cost_rate", "exit_cap", "sale_cost_rate", "bad_debt"}
 
 
 def read_json(path):

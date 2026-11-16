@@ -39,7 +39,7 @@ def plan(deal, inspected):
     fields = {tx: {"purchase_price":"purchase_price","buyer_cost_rate":"buyer_cost_rate",
                    "close_date":"close_date","hold_months":"hold_months","exit_cap":"exit_cap",
                    "sale_cost_rate":"sale_cost_rate","gp_share":"gp_share"},
-              asset:{"current_leasing":"current_leasing","renewal_rate":"renewal_rate",
+              asset:{"current_leasing":"current_leasing","renewal_rate":"renewal_rate","bad_debt":"bad_debt",
                      "annual_reserve_per_unit":"annual_reserve_per_unit","retail_area":"retail_area"}}
     for sheet, pairs in fields.items():
         for key,slot in pairs.items():
@@ -87,6 +87,10 @@ def plan(deal, inspected):
         for slot,vs in [('unit_types',order),('unit_counts',[mix[k]['count'] for k in order]),('unit_sizes',[mix[k]['avg_rsf'] for k in order])]:
             bind(asset,slot,pad(vs),"unit_mix",deal["roll"]["source"])
         rate=active("market_rent_growth")
+        stabilized=decisions.get("stabilized_rent_growth",{})
+        if stabilized.get("value") is not None and stabilized.get("status")!="scenario" and stabilized["value"]!=rate:
+            manual.append("Market and stabilized growth differ: derive each layout's growth from its weighted rent dollars (workbook map, rows 37/47/57/67)")
+            rate=None
         if rate is not None:
             for i in range(1,len(order)+1):
                 bind(asset,f"rent_growth_type{i}",rate,"market_rent_growth",decisions["market_rent_growth"]["source"])
