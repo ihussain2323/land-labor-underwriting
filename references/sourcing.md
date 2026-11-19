@@ -40,6 +40,30 @@ Defaults are Brooklyn Community District 1 (`--cd 301`) with primary zips 11211,
 - HPD contacts are self-reported at annual registration and can lag a sale. Compare the registration date with the last deed.
 - Multi-lot deeds show the full consideration on every lot they cover.
 
-## Phase 2: back-of-napkin value (not built)
+## Phase 2: back-of-napkin value
 
-Per the deal lead: revenue from listed rents as a proxy, acknowledged to run high because long-term tenants pay less; operating expenses of $10,000 per unit plus real estate taxes, or $13 per SF; value at a 5.75% cap or higher; vacancy from units advertised on the building's site against the total. Use post-expiry taxes, since that is what a buyer will pay. Before building it, agree the rent source with the deal lead: listing sites restrict automated collection, so use a licensed feed, manual samples, or the owner's own site.
+Purpose: rank the targets by rough value so the deal lead knows which owners to call first. It is not an underwriting and nothing from it goes into a model.
+
+Put `rents.json` in the run folder and rerun `source_report.py`; the workbook gains a Napkin tab and a Rent evidence tab. Without the file the workbook is Phase 1 only. `scripts/source_napkin.py` documents the file format: one object per target with the advertised units (beds, asking rent, SF, source link), the count of units advertised, a confidence grade and notes.
+
+Per the deal lead on November 18, 2026:
+
+| Line | Rule |
+|---|---|
+| Revenue | Listed asking rents x units. Acknowledged to run high because long-term tenants pay less. A discount input is on the tab, default 0%. |
+| Vacancy | Units advertised / total units, with a 3% floor. The floor is an added assumption. |
+| Operating expenses | $10,000 per unit. The $13 per SF alternative is shown as a second value. It is read as replacing the $10,000, with RE tax still added; confirm that reading. |
+| RE tax | Full post-expiry tax: (assessed total - all exemptions + 421-a exempt value) x class 2 rate. |
+| Value | NOI / 5.75%. |
+
+Rules added in the build:
+
+- **Rent source.** Listing sites block automated collection. Use the building's or manager's own site first, then figures visible in search results. Record every unit on the Rent evidence tab with its link, grade the building high, medium or low, and never fill a gap with an invented rent.
+- **Unit mix.** A straight average of advertised units is biased by which units happen to be listed. Each listing is divided by the area average for its bedroom count, the building's ratios are averaged into an index, and the index is applied to the area rent at an assumed mix (20% studio, 50% one-bedroom, 30% two-bedroom, editable). A building with no listings gets index 1.00 and is labelled "Area average".
+- **Flags.** Note commercial space (taxed but no income counted), large units (per-unit rent understates), and condo structures (assessed value covers every lot).
+
+Limits to state in the handoff:
+
+- Asking rents are not in-place rents. Most of these buildings are rent-stabilized for the life of the 421-a, so in-place rents can sit well below asking.
+- Affordable units, unit mix, commercial income and concessions are unknown until an owner sends a rent roll.
+- Where a building traded recently, compare the napkin value with the deed price as a sanity check.

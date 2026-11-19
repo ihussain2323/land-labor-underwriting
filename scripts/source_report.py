@@ -7,6 +7,7 @@ import argparse, csv, datetime as dt, json, os
 from openpyxl import Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter as L
+import source_napkin
 
 F = 'Arial'
 HEAD = PatternFill('solid', start_color='1F3A5F')
@@ -172,7 +173,7 @@ def main():
         ('ACRIS Real Property Legals, Master, Parties', 'data.cityofnewyork.us/d/8h5j-fqxa, /d/bnx9-e6tj, /d/636b-3b5g'),
         (None, None), ('Not yet verified', None),
         ('Tax bills', 'End years are derived from DOF exemption records, not read off each bill. Spot-check two or three bills before outreach.'),
-        ('Rents, vacancy, value', 'Phase 2. Nothing here estimates rent or price.')]
+        ('Rents, vacancy, value', 'Napkin tab, present when rents.json is in the run folder. Asking rents from building or manager sites; unit mix, affordable units and in-place rents are not known until an owner sends a rent roll.')]
     for i, (k, v) in enumerate(lines, 1):
         m.cell(i, 1, k).font = Font(name=F, size=10, bold=v is None or k in ('Input', 'Funnel'))
         c = m.cell(i, 2, v)
@@ -194,6 +195,12 @@ def main():
             r['note'] = r['status'].capitalize() + ('. Individually owned condo.' if r['rental'] != 'True' else '.')
     sheet(wb, 'Universe', uni, 'Every building that passed the size screen, with or without 421-a, so the filter can be audited.')
     wb.move_sheet('Method', offset=3)
+    rents = source_napkin.load(a.dir)
+    if rents is not None:
+        n = source_napkin.add_napkin(wb, targets, rents)
+        wb.move_sheet('Napkin', offset=-4)
+        wb.move_sheet('Rent evidence', offset=-3)
+        print('napkin: listings', n, 'buildings with evidence', sum(1 for r in targets if (rents.get(source_napkin.norm(r['address'])) or {}).get('listings')))
     wb.active = 0
     out = os.path.join(a.dir, a.name)
     wb.save(out)
