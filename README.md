@@ -69,4 +69,5 @@ Each new property starts with a fresh deal record and workbook. Keep deal files 
 | [Starter record](assets/deal-start.json) and [schema](schemas/deal.schema.json) | Evidence and decisions for one property |
 | [Workbook map](assets/master-map.json) and [mapping guide](references/workbook-map.md) | Candidate cells, surrounding labels and checks for shifted layouts |
 | [Scripts](scripts/) and [execution guide](references/run.md) | Research, reconciliation, planning, capture and verification |
+| [Sourcing screen](references/sourcing.md) | Off-market target list: 421-a expiry, owner contacts, last deed and mortgage |
 | [Conditional cases](references/cases-and-checks.md) | Abatements, expense gaps, debt structures, waterfalls and review checks |
